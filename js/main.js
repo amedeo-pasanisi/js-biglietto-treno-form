@@ -1,4 +1,5 @@
-var btnGenera = document.getElementById("calcola-prezzo");
+var btnGenera = document.getElementById("btnGenera");
+var btnAnnulla = document.getElementById("btnAnnulla");
 
 btnGenera.addEventListener('click',
     function () {
