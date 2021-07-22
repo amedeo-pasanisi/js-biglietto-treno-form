@@ -8,47 +8,61 @@
     <title>biglietto-treno-form</title>
 </head>
 <body>
-    <div>
-        <label for="nome">Nome Cognome:</label>
-        <input id="nome" type="text" name="nome" placeholder="inserisci il tuo nome">
-
-        <label for="km">Km da percorrere:</label>
-        <input id="km" type="number" name="km" placeholder="inserisci i km">
-        
-        <label for="fasciaEta">Fascia d'età:</label>
-        <select name="fasciaEta" id="fasciaEta">
-            <option value="none"></option>
-            <option value="minorenne">minorenne</option>
-            <option value="maggiorenne">maggiorenne</option>
-            <option value="over-65">over 65</option>
-        </select>
-    </div>
-    <div>
-        <button id="btnGenera" name="genera">Genera</button>
-        <button id="btnAnnulla" name="annulla">Annulla</button>
-    </div>
-
-    <div id="biglietto">
-        <section>
-            <h3>NOME PASSEGGERO</h3>
-            <div id="nomePasseggero"></div>
-        </section>
-        <section>
-            <h3>Offerta</h3>
-            <div id="offerta"></div>
-        </section>
-        <section>
-            <h3>Carrozza</h3>
-            <div id="carrozza"></div>
-        </section>
-        <section>
-            <h3>Codice CP</h3>
-            <div id="codiceCP"></div>
-        </section>
-        <section>
-            <h3>Costo biglietto</h3>
-            <div id="costoBiglietto"></div>
-        </section>
+    <div class="container">
+        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <div class="wrapper">
+            <section class="form">
+                <div>
+                    <label for="nome">Nome Cognome:</label>
+                    <input id="nome" type="text" name="nome" placeholder="inserisci il tuo nome">
+                </div>
+                
+                <div>
+                    <label for="km">Km da percorrere:</label>
+                    <input id="km" type="number" name="km" placeholder="inserisci i km">
+                </div>
+                
+                <div>
+                    <label for="fasciaEta">Fascia d'età:</label>
+                    <select name="fasciaEta" id="fasciaEta">
+                        <option value="none"></option>
+                        <option value="minorenne">minorenne</option>
+                        <option value="maggiorenne">maggiorenne</option>
+                        <option value="over-65">over 65</option>
+                    </select>
+                </div>
+            </section>
+            <section class="bottoni">
+                <button id="btnGenera" name="genera">Genera</button>
+                <button id="btnAnnulla" name="annulla">Annulla</button>
+            </section>
+        </div>
+        <h1>IL TUO BIGLIETTO</h1>
+        <div id="biglietto" class="wrapper">
+            <h3>DETTAGLIO PASSEGGERI</h3>
+            <div class="wrapper">
+                <section>
+                    <h3>NOME PASSEGGERO</h3>
+                    <p id="nomePasseggero"></p>
+                </section>
+                <section>
+                    <h3>Offerta</h3>
+                    <p id="offerta"></p>
+                </section>
+                <section>
+                    <h3>Carrozza</h3>
+                    <p id="carrozza"></p>
+                </section>
+                <section>
+                    <h3>Codice CP</h3>
+                    <p id="codiceCP"></p>
+                </section>
+                <section>
+                    <h3>Costo biglietto</h3>
+                    <p id="costoBiglietto"></p>
+                </section>
+            </div>
+        </div>
     </div>
 
     <script src="js/main.js"></script>

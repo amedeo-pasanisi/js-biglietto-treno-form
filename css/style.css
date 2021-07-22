@@ -4,7 +4,71 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #B81450;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.container>.wrapper {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+h1 {
+    color: white;
+    margin: 30px 0;
+    text-align: center;
+}
+
+section.form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+section.form>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+}
+
+label {
+    color: #B81450;
+    margin: 10px 0;
+}
+
+section.bottoni {
+    text-align: center;
+}
+
+section.bottoni button {
+    margin: 0 10px;
+}
+
 #biglietto {
     display: none;
-    background-color: aqua;
+}
+
+#biglietto .wrapper {
+    display: flex;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+#biglietto section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+    padding: 20px;
+}
+
+#biglietto section:first-child {
+    background-color: gray;
 }

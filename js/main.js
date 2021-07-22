@@ -6,6 +6,12 @@ btnGenera.addEventListener('click',
         var nome = document.getElementById("nome").value;
         var km = document.getElementById("km").value;
         var fasciaEta = document.getElementById("fasciaEta").value;
+        
+        var nomePasseggero = document.getElementById("nomePasseggero");
+        var offerta = document.getElementById("offerta");
+        var costoBiglietto = document.getElementById("costoBiglietto");
+        var carrozza = document.getElementById("carrozza");
+        var codiceCP = document.getElementById("codiceCP");
 
         var euroAlKm = 0.21;
         var prezzoStandard = km * euroAlKm;
@@ -19,21 +25,21 @@ btnGenera.addEventListener('click',
         var prezzoOver65 = prezzoStandard - ((prezzoStandard * scontoOver65) / 100);
         prezzoOver65 = Math.round(prezzoOver65 * 100) / 100;
 
-        document.getElementById("nomePasseggero").innerHTML = nome;
+        nomePasseggero.innerHTML = nome;
 
         if (fasciaEta == "minorenne") {
-            document.getElementById("offerta").innerHTML = "sconto minorenni: -20%";
-            document.getElementById("costoBiglietto").innerHTML = "€ " + prezzoMinorenni;
+            offerta.innerHTML = "sconto minorenni: -20%";
+            costoBiglietto.innerHTML = "€ " + prezzoMinorenni;
         } else if (fasciaEta == "over-65") {
-            document.getElementById("offerta").innerHTML = "sconto over 65: -40%";
-            document.getElementById("costoBiglietto").innerHTML = "€ " + prezzoOver65;
+            offerta.innerHTML = "sconto over 65: -40%";
+            costoBiglietto.innerHTML = "€ " + prezzoOver65;
         } else {
-            document.getElementById("offerta").innerHTML = "Biglietto Standard";
-            document.getElementById("costoBiglietto").innerHTML = "€ " + prezzoStandard;
+            offerta.innerHTML = "Biglietto Standard";
+            costoBiglietto.innerHTML = "€ " + prezzoStandard;
         }
 
-        document.getElementById("carrozza").innerHTML = Math.floor((Math.random() * 10) + 1);
-        document.getElementById("codiceCP").innerHTML = Math.floor((Math.random() * 10001) + 90000);
+        carrozza.innerHTML = Math.floor((Math.random() * 10) + 1);
+        codiceCP.innerHTML = Math.floor((Math.random() * 10001) + 90000);
 
         var biglietto = document.getElementById("biglietto");
         biglietto.style.display = "block";
