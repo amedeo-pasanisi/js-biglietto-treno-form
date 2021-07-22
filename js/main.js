@@ -3,21 +3,22 @@ var btnAnnulla = document.getElementById("btnAnnulla");
 
 btnGenera.addEventListener('click',
     function () {
-        var nome = getElementById("nome").value;
-        var km = getElementById("km").value;
-        var fascia-eta =getElementById(fascia-eta).value;
+        var nome = document.getElementById("nome").value;
+        var km = document.getElementById("km").value;
+        var fasciaEta = document.getElementById("fasciaEta").value;
 
-        var biglietto = getElementById("biglietto");
+        var biglietto = document.getElementById("biglietto");
         biglietto.style.display = "block";
     }
 )
 
 btnAnnulla.addEventListener('click',
     function () {
-        var nome = getElementById("nome").value;
-        var km = getElementById("km").value;
+        document.getElementById("nome").value = "";
+        document.getElementById("km").value = "";
+        document.getElementById("fasciaEta").value = "";
 
-        var biglietto = getElementById("biglietto");
-        biglietto.style.display = "block";
+        var biglietto = document.getElementById("biglietto");
+        biglietto.style.display = "none";
     }
 )

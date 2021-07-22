@@ -8,23 +8,29 @@
     <title>biglietto-treno-form</title>
 </head>
 <body>
+    <div>
+        <label for="nome">Nome Cognome:</label>
+        <input id="nome" type="text" name="nome" placeholder="inserisci il tuo nome">
 
-    <label for="nome">Nome Cognome:</label>
-    <input id="nome" type="text" name="nome" placeholder="inserisci il tuo nome">
+        <label for="km">Km da percorrere:</label>
+        <input id="km" type="number" name="km" placeholder="inserisci i km">
+        
+        <label for="fasciaEta">Fascia d'età:</label>
+        <select name="fasciaEta" id="fasciaEta">
+            <option value="none"></option>
+            <option value="minorenne">minorenne</option>
+            <option value="maggiorenne">maggiorenne</option>
+            <option value="over-65">over 65</option>
+        </select>
+    </div>
+    <div>
+        <button id="btnGenera" name="genera">Genera</button>
+        <button id="btnAnnulla" name="annulla">Annulla</button>
+    </div>
 
-    <label for="km">Km da percorrere:</label>
-    <input id="km" type="number" name="km" placeholder="inserisci i km">
-
-    <select name="fascia-eta" id="fascia-eta">
-        <option value="minorenne">minorenne</option>
-        <option value="maggiorenne">maggiorenne</option>
-        <option value="over-65">over 65</option>
-    </select>
-
-    <button id="btnGenera" name="genera">Genera</button>
-    <button id="btnAnnulla" name="annulla">Annulla</button>
-
-    <div id="biglietto"></div>
+    <div id="biglietto">
+        <h1>Esisto</h1>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
